@@ -1,28 +1,21 @@
-pipeline {
+ pipeline {
     agent any
 
-   stages {
-        stage('hello') {
-            steps {
-                echo 'Hello World'
+    stages{
+        stage("build"){
+            steps{
+                echo "build"
             }
         }
-        stage('build') {
-            steps {
-                echo 'build'
+        stage("test"){
+            steps{
+                echo "test"
             }
         }
-        stage('test') {
-            steps {
-                echo 'test'
-            }
-        }
-        stage('deploy') {
-            steps {
-                echo 'deploy'
+        stage("deploy"){
+            steps{
+                echo "deploy"
             }
         }
     }
-}
-
 }
